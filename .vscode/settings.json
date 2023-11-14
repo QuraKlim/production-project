@@ -1,7 +1,10 @@
 {
-    "i18n-ally.localesPaths": [
-        "public/locales",
-        "src/shared/config/i18n"
-    ],
-    "i18n-ally.keystyle": "flat"
+	"i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+	"i18n-ally.keystyle": "flat",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"eslint.format.enable": true,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	}
 }
