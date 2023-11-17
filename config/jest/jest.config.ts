@@ -4,6 +4,7 @@
  */
 
 import type { Config } from 'jest'
+import path from 'path'
 
 const config: Config = {
   // Automatically clear mock calls, instances, contexts and results before every test
@@ -24,8 +25,19 @@ const config: Config = {
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
 
+  modulePaths: ['<rootDir>src'],
+
   // The glob patterns Jest uses to detect test files
   testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+
+  setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.ts'],
+
+  moduleNameMapper: {
+    // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    //   '<rootDir>/__mocks__/fileMock.js',
+    '\\.s?css$': 'identity-obj-proxy',
+    '^.+\\.svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,

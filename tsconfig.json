@@ -1,23 +1,24 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": true,
-      "module": "ESNext",
-      "target": "es5",
-      "jsx": "react-jsx",
-      "allowJs": true,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "baseUrl": ".",
-      "strictNullChecks": true,
-      "paths": {
-        "*": ["./src/*"]
-      }
-    },
-    "ts-node": {
-        "compilerOptions": {
-            "module": "CommonJS"
-        }
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "strictNullChecks": true,
+    "paths": {
+      "*": ["./src/*"]
     }
-  }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": ["./config/jest/jest-setup.ts", "**/*.ts", "**/*.tsx", "**/**/*.ts", "**/**/*.tsx"]
+}
