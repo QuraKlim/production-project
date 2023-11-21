@@ -20,5 +20,12 @@
       "module": "CommonJS"
     }
   },
-  "include": ["./config/jest/jest-setup.ts", "**/*.ts", "**/*.tsx", "**/**/*.ts", "**/**/*.tsx"]
+  "include": [
+    "./config/jest/jest-setup.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/**/*.ts",
+    "**/**/*.tsx",
+    "config/storybook/preview.ts"
+  ]
 }
